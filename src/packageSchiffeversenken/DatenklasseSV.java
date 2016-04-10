@@ -179,10 +179,10 @@ public class DatenklasseSV {
 			spielfeld2[yK][xK] = schiffsTyp;
 			for (int x = 0; x < spielfeld2.length; x++) {
 				for (int y = 0; y < spielfeld2.length; y++) {
-					//System.out.print(spielfeld2[y][x]); // Ausgabe der Array
+					System.out.print(spielfeld2[y][x]); // Ausgabe der Array
 														// Elemente
 				}
-				//System.out.println();
+				System.out.println();
 			}
 		} else {
 			System.err.println("keine Gültige Spielernummer!");

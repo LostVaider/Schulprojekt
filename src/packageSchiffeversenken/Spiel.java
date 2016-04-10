@@ -25,7 +25,7 @@ public class Spiel
 		//schiessen(1);				//schuss setzen
 		//s.setxyK(1, 1, 5, 1);		//koordinate setzen
 		//gewinnAbfrage();			//gewonnen?
-		s.spielfeld();			//spielfeld anzeigen
+		//s.spielfeld();			//spielfeld anzeigen
 	}
 	
 	public void spielAnfangen()

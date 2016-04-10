@@ -131,10 +131,13 @@ public class SV_Gui extends JFrame implements MouseListener {
 		for (int x = 1; x <= 10; x++) {
 			for (int y = 1; y <= 10; y++) {
 
+				if (steuerung.getSpielfeldElement(1, x - 1, y - 1) != 0) {
+					g.fillRect(x * 50, y * 50, 50, 50);
+
+				}
+
 				if (steuerung.getSpielfeldElement(2, x - 1, y - 1) != 0) {
 					g.fillRect(550 + x * 50, y * 50, 50, 50);
-				} else if (steuerung.getSpielfeldElement(1, x - 1, y - 1) != 0) {
-					g.fillRect(x * 50, y * 50, 50, 50);
 
 				}
 			}
@@ -147,17 +150,16 @@ public class SV_Gui extends JFrame implements MouseListener {
 		int x = e.getX() / 50;
 		int y = e.getY() / 50;
 
-		if (x >= 12) {
-
-			x = x - 11;
-			System.out.println("Feld2: x:" + x + " y:" + y);
-			steuerung.setxyK(x, y, 1, 2);
-		} else
+		if (x <= 10) {
 
 			System.out.println("Feld1: x:" + x + " y:" + y);
+			steuerung.setxyK(x, y, 1, 1);
+		} else {
+			x = x - 11;
+			System.out.println("Feld2: x:" + x + " y:" + y);
 
-		steuerung.setxyK(x, y, 3, 1);
-
+			steuerung.setxyK(x, y, 2, 2);
+		}
 	}
 
 	@Override
